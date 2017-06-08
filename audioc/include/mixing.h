@@ -23,7 +23,7 @@ void stereo_summator_d(const struct stereo_audio_d *input,
                        const void *unused);
 
 void mixing_signals(const struct mixing_parameters *parameters,
-                    const struct signal **signals,
+                    const struct signal * signals,
                     frame_transform_operation summator,
                     frame_transform_operation gainer,
                     struct signal *output);

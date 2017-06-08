@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.7)
 project(audiotest)
 
-add_subdirectory(audio_io)
 add_subdirectory(audioc)
 #add_subdirectory(audiocpp)
 

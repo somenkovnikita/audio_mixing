@@ -6,7 +6,7 @@
 
 #include <math.h>
 
-#include "audio_generator.h"
+#include "../include/audio_generator.h"
 
 void generate_tone_d(const struct tone_generator_params *params,
                      double *output)

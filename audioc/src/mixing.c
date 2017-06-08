@@ -20,7 +20,7 @@ void mono_summator_d(const struct mono_audio_d *input,
 }
 
 void mixing_signals(const struct mixing_parameters *parameters,
-                    const struct signal **signals,
+                    const struct signal * signals,
                     frame_transform_operation summator,
                     frame_transform_operation gainer,
                     struct signal *output)
@@ -34,7 +34,7 @@ void mixing_signals(const struct mixing_parameters *parameters,
     {
         const double gain = parameters->gaines[i];
 
-        apply_transform(signals[i], &buffer, gainer, &gain);
+        apply_transform(signals + i, &buffer, gainer, &gain);
         apply_transform(&buffer, output, summator, NULL);
     }
 
