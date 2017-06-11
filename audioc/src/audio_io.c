@@ -26,7 +26,6 @@ void to_file_raw_audio(const void *data, size_t size, const void *args)
     fclose(file);
 }
 
-
 void io_write(const struct io_device *device, const void *data, size_t size, const void *args)
 {
     device->write(data, size, args);

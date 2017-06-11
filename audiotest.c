@@ -1,16 +1,16 @@
 #include <stdlib.h>
 
-#include <include/signal.h>
-#include <include/audio_types.h>
-#include <include/audio_generator.h>
-#include <include/audio_io.h>
-#include <include/mixing.h>
-#include <include/processing.h>
+#include "audioc/include/signal.h"
+#include "audioc/include/audio_types.h"
+#include "audioc/include/audio_generator.h"
+#include "audioc/include/audio_io.h"
+#include "audioc/include/mixing.h"
+#include "audioc/include/processing.h"
 
 struct signal generate_44100_10000(double freq)
 {
     struct tone_generator_params params;
-    params.durations_ms = 10000;
+        params.durations_ms = 10000;
     params.rate = 44100;
     params.frequency = freq;
 
